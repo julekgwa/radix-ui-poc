@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Clash Display', sans-serif;
+  background: linear-gradient(225.01deg, #FA4A6F 7.89%, #EF5395 33.37%, #DE4DCB 70.42%, #CE4CE6 90.32%), #E252BF;
+}
