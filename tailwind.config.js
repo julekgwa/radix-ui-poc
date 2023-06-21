@@ -1,3 +1,5 @@
+import plugin from 'tailwindcss/plugin'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -6,7 +8,9 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'button': 'box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);'
+        button: 'box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);',
+        input: '0px 20px 15px rgba(0, 0, 0, 0.05)',
+        logo: 'box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.05)'
       },
       fontFamily: {
 
@@ -20,6 +24,13 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({addBase, theme}) => {
+      addBase({
+        // or whichever color you'd like
+        'html': {color: theme('colors.white')},
+      });
+    })
+  ],
 }
 
